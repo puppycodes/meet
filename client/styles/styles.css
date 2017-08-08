@@ -81,3 +81,39 @@ button {
 .unread:hover {
   background: rgba(0, 0, 0, 0.3) !important;
 }
+
+h1 {
+  display: none;
+}
+
+
+.window-center {
+  display: -webkit-flex;
+display: flex;
+-webkit-flex-direction: row /* works with row or column */
+flex-direction: row;
+-webkit-align-items: center;
+align-items: center;
+-webkit-justify-content: center;
+justify-content: center;
+height: 100vh;
+}
+
+.landing {
+  box-shadow: none !important;
+}
+
+.landing button {
+  background-image: url(images/load.jpg) !important;
+  background-position: center;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-color: #fff !important;
+  height: 5em !important;
+  width: 10em !important;
+
+}
+
+.landing button:hover {
+
+}

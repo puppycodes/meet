@@ -20,11 +20,13 @@ const styles = {
     css: {
       margin: '0 0 20px 0',
       width: '100%',
+      textAlign: 'center',
+      fontSize: '2em',
     },
     cell: {
       css: {
         padding: '10px',
-        width: '50%',
+        width: '100%',
       },
     },
   },
@@ -52,24 +54,20 @@ export class FirstOverlayComponent extends PureComponent {
                 style={[
                   GlobalStyles.cell,
                   styles.invite.cell.css]}
-                className="text-right"
-              >You are the only one here.
+                className="text-center"
+              > 😔 you are alone 😔
               </div>
               <div
                 style={[
                   GlobalStyles.cell,
                   styles.invite.cell.css]} className="text-left"
               >
-                <RaisedButton
-                  label="Invite people"
-                  secondary
-                  onTouchTap={this.props.action}
-                />
+
               </div>
             </div>
             <div>
               <div className="text-center">
-                {'Share the permanent link. Bookmark and come back anytime.'}
+                {''}
               </div>
               <div
                 style={[

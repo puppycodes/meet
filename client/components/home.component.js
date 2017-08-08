@@ -16,14 +16,7 @@ import LoadingDialogComponent from './loading-dialog.component';
 
 const styles = {
   css: {
-    backgroundAttachment: 'fixed',
-    backgroundImage: 'url(images/quasar.jpg)',
-    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    color: Colors.fullWhite,
-    height: '100%',
-    minHeight: '500px',
+
   },
 
   title: {
@@ -56,30 +49,30 @@ export class HomeComponent extends React.Component {
   render() {
     return (
       <div style={[styles.css]}>
-        <GithubComponent link={GITHUB_URL} />
+
         {this.state.loading ?
           <LoadingDialogComponent open title="Starting video call" /> : ''
         }
         <div style={[GlobalStyles.stickyFooterPage]}>
           <HeaderComponent showMenuIconButton={false} />
-          <div>
-            <div className="col-xs-12 text-center">
-              <h1 style={[styles.title.css]}>{APP_NAME}</h1>
+
+            <div className="col-xs-12 window-center">
+
               <br />
               <RaisedButton
                 onClick={this.createRoom}
-                label="Start video call"
+                label=" "
+                className="landing"
                 secondary
-                style={{ marginBottom: '50px' }}
+                style={{ }}
               />
               <br />
-              {(Browser.mac && !Browser.electron) ?
-                <DownloadButtonComponent platform="mac" link={DOWNLOAD_URLS.mac} /> : ''}
+
             </div>
           </div>
         </div>
-        <FooterComponent company={COMPANY} />
-      </div>
+
+  
     );
   }
 }

@@ -70,6 +70,7 @@ const styles = {
   menu: {
     css: {
       color: Colors.fullBlack,
+      display: 'none',
     },
 
     paper: {
@@ -275,7 +276,7 @@ export class HeaderComponent extends Component {
       'loggingIn', 'subscribed', 'users', 'dispatch',
     ]);
 
-    let loginButton;
+    let loginButton = null;
     let menuItems;
     let notificationDropdown;
     let profileButtons;
@@ -340,8 +341,9 @@ export class HeaderComponent extends Component {
       );
     } else {
       loginButton = (<FlatButton
-        label="Login with Google"
+        label="_"
         onTouchTap={this.loginWithGoogle}
+        style={{ display: 'none' }}
       />);
     }
 
@@ -401,7 +403,7 @@ export class HeaderComponent extends Component {
     }
 
     return (
-      <header>
+      <header >
         <AppBar
           title={''}
           iconElementRight={mobile ? (
@@ -431,5 +433,6 @@ const mapStateToProps = ({ users: { user }, notifications: { notifications } }) 
   user,
   notifications,
 });
+  let loginButton = null;
 
 export default connect(mapStateToProps)(Radium(HeaderComponent));
